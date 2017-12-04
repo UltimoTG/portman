@@ -1,0 +1,25 @@
+version: '2'
+services:
+  app:
+    build:
+        context: .
+        dockerfile: docker/Dockerfile
+    volumes:
+        - ./:/var/www/
+    ports:
+        - "80:80"
+        - "8888:8888"
+    links:
+        - appdb
+    environment:
+        - MYSQL_ROOT_PASSWORD=mySQLRootPassword!
+        - MYSQL_HOST=appdb
+        - MYSQL_PORT=3306
+        - MYSQL_DATABASE=PortMan
+        - LUCEE_PASSWORD=myLuceeRootPassword!
+        - LUCEE_JAVA_OPTS=-Xms1024m -Xmx1024m
+  appdb:
+    image: mysql
+    environment:
+        MYSQL_ROOT_PASSWORD : mySQLRootPassword!
+        MYSQL_DATABASE : PortMan
