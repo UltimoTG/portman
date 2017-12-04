@@ -7,11 +7,8 @@
         <li <cfif rc.activeClassName eq "portfolios">class="active"</cfif>>
           <a href="#buildURL('portfolio')#">Portfolios</a>
         </li>
-        <li <cfif rc.activeClassName eq "positions">class="active"</cfif>>
+        <li <cfif listFindNoCase("positions,transactions", rc.activeClassName)>class="active"</cfif>>
           <a href="#buildURL('position')#">Positions</a>
-        </li>
-        <li <cfif rc.activeClassName eq "transactions">class="active"</cfif>>
-          <a href="#buildURL('transaction')#">Transactions</a>
         </li>
       </ul>
     </div>

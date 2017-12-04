@@ -1,9 +1,10 @@
 <cfoutput>
     <div class="row">
-        <div class="col-xs-9 col-sm-9 col-md-10">
+        <div class="col-xs-6 col-sm-6 col-md-8">
             <h1 class="page-header">Transactions</h1>
         </div>
-        <div class="col-xs-3 col-sm-3 col-md-2">
+        <div class="col-xs-6 col-sm-6 col-md-4">
+            <a class="btn btn-primary" href="#buildURL(action='position.default')#" role="button">Go Back</a>
             <a class="btn btn-primary" href="#buildURL(action='transaction.new', queryString='positionID=#rc.positionID#')#" role="button">Add Transaction</a>
         </div>
     </div>
