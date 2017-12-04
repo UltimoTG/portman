@@ -24,13 +24,15 @@ component accessors="true" {
 
         if (!structKeyExists(session.stockPrices, arguments.stockSymbol)) {
             var stockData = getData(arguments.stockSymbol, arguments.startDate, arguments.endDate);
-            if (!isNull(stockData)) {
-              var stockPriceArr = stockData.dataset.data;
+            if (!isNull(stockData) && structKeyExists(stockData, "dataset")) {
+                var stockPriceArr = stockData.dataset.data;
+                var arrLength = arrayLen(stockPriceArr);
+                var stockPrice = stockPriceArr[arrLength][2];
+                session.stockPrices["#arguments.stockSymbol#"] = stockPrice;
             }
-            var arrLength = arrayLen(stockPriceArr);
-            var stockPrice = stockPriceArr[arrLength][2];
-
-            session.stockPrices["#arguments.stockSymbol#"] = stockPrice;
+            else {
+                var stockPrice = 0;
+            }
         }
         else {
             var stockPrice = session.stockPrices["#arguments.stockSymbol#"];
