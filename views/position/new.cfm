@@ -18,18 +18,7 @@
                         <div class="col-lg-6">
                             <form role="form" action="?action=position.save" method="post">
                                 <input type="hidden" name="portfolioID" value="#rc.portfolioID#">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input class="form-control" name="name" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label>Symbol</label>
-                                    <input class="form-control" name="symbol" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea class="form-control" rows="3" name="description"></textarea>
-                                </div>
+                                <cfinclude template = "_form.cfm">
                                 <button type="submit" class="btn btn-default btn-primary">Submit</button>
                                 <button type="reset" class="btn btn-default">Reset</button>
                             </form>

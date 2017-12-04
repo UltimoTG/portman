@@ -10,7 +10,7 @@ component accessors="true" extends="baseController" {
     }
 
     function new( struct rc ) {
-        rc.newPortfolio = getPortfolioService().new();
+        rc.portfolio = getPortfolioService().new();
     }
 
     function save( struct rc ) {
@@ -19,11 +19,11 @@ component accessors="true" extends="baseController" {
     }
 
     function edit( struct rc ) {
-    	rc.editPortfolio = getPortfolioService().get(rc.portfolioID);
+    	rc.portfolio = getPortfolioService().get(rc.portfolioID);
     }
 
     function delete( struct rc ) {
-        rc.deletePortfolio = getPortfolioService().delete(rc.portfolioID);
+        rc.portfolio = getPortfolioService().delete(rc.portfolioID);
         variables.fw.redirect( 'portfolio.default' );
     }
 }

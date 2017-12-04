@@ -71,21 +71,21 @@ component accessors="true" extends="baseController" {
     }
 
     function new( struct rc ) {
-        rc.newPosition = getPositionService().new();
+        rc.position = getPositionService().new();
     }
 
     function save( struct rc ) {
-    	rc.savedPosition = getPositionService().save(rc);
+    	rc.position = getPositionService().save(rc);
         variables.fw.redirect( action='position.default', queryString="portfolioID=#rc.portfolioID#" );
     }
 
     function edit( struct rc ) {
-    	rc.editPosition = getPositionService().get(rc.positionID);
+    	rc.position = getPositionService().get(rc.positionID);
     }
 
     function delete( struct rc ) {
         var portfolioID = getPositionService().get(rc.positionID).getportfolioID();
-        rc.deletePosition = getPositionService().delete(rc.portfolioID);
+        rc.position = getPositionService().delete(rc.portfolioID);
         variables.fw.redirect( action='position.default', queryString="portfolioID=#portfolioID#" );
     }
 }

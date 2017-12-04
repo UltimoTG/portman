@@ -19,18 +19,9 @@
                             <form role="form" action="?action=position.save" method="post">
                                 <input type="hidden" name="id" value="#rc.positionID#">
                                 <input type="hidden" name="portfolioID" value="#rc.portfolioID#">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input class="form-control" name="name" value="#rc.editPosition.getName()#">
-                                </div>
-                                <div class="form-group">
-                                    <label>Symbol</label>
-                                    <input class="form-control" name="symbol" value="#rc.editPosition.getSymbol()#">
-                                </div>
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea class="form-control" rows="3" name="description">#rc.editPosition.getDescription()#</textarea>
-                                </div>
+                                
+                                <cfinclude template = "_form.cfm">
+
                                 <button type="submit" class="btn btn-default btn-primary">Submit</button>
                                 <button type="reset" class="btn btn-default">Reset</button>
                             </form>

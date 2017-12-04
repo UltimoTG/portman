@@ -18,31 +18,7 @@
                         <div class="col-lg-6">
                             <form role="form" action="?action=transaction.save" method="post">
                                 <input type="hidden" name="positionID" value="#rc.positionID#">
-                                <div class="form-group">
-                                    <label>Date</label>
-                                    <div class='input-group date datetimepicker'>
-                                        <input class="form-control" name="purchaseDate" value="">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Shares</label>
-                                    <input class="form-control" name="shares" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label>Price</label>
-                                    <input class="form-control" name="price" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label>Commission</label>
-                                    <input class="form-control" name="commission" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label>Notes</label>
-                                    <textarea class="form-control" rows="3" name="notes"></textarea>
-                                </div>
+                                <cfinclude template = "_form.cfm">
                                 <button type="submit" class="btn btn-default btn-primary">Submit</button>
                                 <button type="reset" class="btn btn-default">Reset</button>
                             </form>

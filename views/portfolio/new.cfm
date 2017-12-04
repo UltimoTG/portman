@@ -17,15 +17,8 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <form role="form" action="?action=portfolio.save" method="post">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input class="form-control" name="name" value="#rc.newPortfolio.getName()#">
-                                    <p class="help-block">Example block-level help text here.</p>
-                                </div>
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea class="form-control" rows="3" name="description">#rc.newPortfolio.getName()#</textarea>
-                                </div>
+                                <cfinclude template = "_form.cfm">
+
                                 <button type="submit" class="btn btn-default btn-primary">Submit Button</button>
                                 <button type="reset" class="btn btn-default">Reset Button</button>
                             </form>

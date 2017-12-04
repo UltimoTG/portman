@@ -23,12 +23,12 @@ component accessors="true" extends="baseController" {
     }
 
     function edit( struct rc ) {
-    	rc.editTransaction = getTransactionService().get(rc.transactionID);
+    	rc.transaction = getTransactionService().get(rc.transactionID);
     }
 
     function delete( struct rc ) {
         var positionID = getTransactionService().get(rc.transactionID).getPositionID();
-        rc.deleteTransaction = getTransactionService().delete(rc.transactionID);
+        rc.transaction = getTransactionService().delete(rc.transactionID);
         variables.fw.redirect( action='transaction.default', queryString="positionID=#positionID#" );
     }
 }
