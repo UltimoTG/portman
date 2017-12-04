@@ -12,10 +12,6 @@ services:
     links:
         - appdb
     environment:
-        - MYSQL_ROOT_PASSWORD=mySQLRootPassword!
-        - MYSQL_HOST=appdb
-        - MYSQL_PORT=3306
-        - MYSQL_DATABASE=PortMan
         - LUCEE_PASSWORD=myLuceeRootPassword!
         - LUCEE_JAVA_OPTS=-Xms1024m -Xmx1024m
   appdb:
