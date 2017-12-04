@@ -11,4 +11,6 @@
         <label>Description</label>
         <textarea class="form-control" rows="3" name="description">#rc.position.getDescription()#</textarea>
     </div>
+    <button type="submit" class="btn btn-default btn-primary">Submit</button>
+    <a href="#buildURL('position.default')#" class="btn btn-default">Cancel</a>
 </cfoutput>

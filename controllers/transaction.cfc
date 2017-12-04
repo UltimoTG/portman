@@ -23,6 +23,7 @@ component accessors="true" extends="baseController" {
     }
 
     function edit( struct rc ) {
+        rc.positionID = getTransactionService().get(rc.transactionID).getPositionID();
     	rc.transaction = getTransactionService().get(rc.transactionID);
     }
 

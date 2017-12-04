@@ -24,4 +24,6 @@
         <label>Notes</label>
         <textarea class="form-control" rows="3" name="notes">#rc.transaction.getNotes()#</textarea>
     </div>
+    <button type="submit" class="btn btn-default btn-primary">Submit</button>
+    <a href="#buildURL(action='transaction',queryString='positionID=#rc.positionID#')#" class="btn btn-default">Cancel</a>
 </cfoutput>

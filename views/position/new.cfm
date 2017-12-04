@@ -19,8 +19,6 @@
                             <form role="form" action="?action=position.save" method="post">
                                 <input type="hidden" name="portfolioID" value="#rc.portfolioID#">
                                 <cfinclude template = "_form.cfm">
-                                <button type="submit" class="btn btn-default btn-primary">Submit</button>
-                                <button type="reset" class="btn btn-default">Reset</button>
                             </form>
                         </div>
                         <!-- /.col-lg-6 (nested) -->
