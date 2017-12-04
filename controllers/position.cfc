@@ -85,7 +85,7 @@ component accessors="true" extends="baseController" {
 
     function delete( struct rc ) {
         var portfolioID = getPositionService().get(rc.positionID).getportfolioID();
-        rc.position = getPositionService().delete(rc.portfolioID);
+        rc.position = getPositionService().delete(rc.positionID);
         variables.fw.redirect( action='position.default', queryString="portfolioID=#portfolioID#" );
     }
 }
