@@ -24,7 +24,7 @@
                                     <p class="help-block">Example block-level help text here.</p>
                                 </div>
                                 <div class="form-group">
-                                    <label>Text area</label>
+                                    <label>Description</label>
                                     <textarea class="form-control" rows="3" name="description">#rc.editPortfolio.getDescription()#</textarea>
                                 </div>
                                 <button type="submit" class="btn btn-default btn-primary">Submit Button</button>
