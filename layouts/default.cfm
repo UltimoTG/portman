@@ -48,7 +48,7 @@
                 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
                     <cfif rc.action eq "main.default">
-                        <h1 class="page-header">Div Manager</h1>
+                        <h1 class="page-header">Portfolio Manager</h1>
                     </cfif>
 
                     <!-- Add your site or application content here -->
