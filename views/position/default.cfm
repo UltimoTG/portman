@@ -18,7 +18,9 @@
             </cfif>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6">
-            <a class="btn btn-primary pull-right" href="#buildURL(action='position.new', queryString='portfolioID=#rc.portfolioID#')#" role="button">Add Position</a>
+            <cfif len(rc.portfolioID)>
+                <a class="btn btn-primary pull-right" href="#buildURL(action='position.new', queryString='portfolioID=#rc.portfolioID#')#" role="button">Add Position</a>
+            </cfif>
         </div>
     </div>
     <div class="row">
