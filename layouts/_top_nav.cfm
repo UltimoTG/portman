@@ -12,9 +12,6 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#buildURL('main')#">Dashboard</a></li>
-        <li><a href="#buildURL('main')#">Settings</a></li>
-        <li><a href="#buildURL('main')#">Profile</a></li>
         <li><a href="#buildURL('main')#">Help</a></li>
       </ul>
       <form class="navbar-form navbar-right">
