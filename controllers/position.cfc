@@ -58,7 +58,10 @@ component accessors="true" extends="baseController" {
             totalCost = totalCost + cost;
             totalMarketValue = totalMarketValue + marketValue;
             totalGain = totalGain + gain;
-            totalGainPercent = (totalGain/totalCost) * 100;
+            totalGainPercent = 0;
+            if (totalCost GT 0) {
+                totalGainPercent = (totalGain/totalCost) * 100;
+            }
         }
 
         rc.grandTotals.totalCost = decimalformat(totalCost);
