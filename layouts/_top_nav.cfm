@@ -13,6 +13,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#buildURL('main')#">Help</a></li>
+        <li><a href="#buildURL('main.default?reloadORM=true')#">Reload ORM</a></li>
       </ul>
       <form class="navbar-form navbar-right">
         <input type="text" class="form-control" placeholder="Search...">
