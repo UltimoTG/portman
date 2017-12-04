@@ -3,8 +3,8 @@ component accessors="true" persistent="true" {
     property name="id" column="id" fieldtype="id" ormtype="string" generator="uuid";
     property name="name" ormtype="string" length="200";
     property name="description" ormtype="string" length="500";
-    property name="createdOn" ormtype="timestamp";
-    property name="modifiedOn" ormtype="timestamp";
+    property name="createdOn" ormtype="timestamp" default="#now()#";
+    property name="modifiedOn" ormtype="timestamp" default="#now()#";
 
     // relationships
     property name="position" type="array" fieldtype="one-to-many" cfc="position" fkcolumn="portfolioid";
@@ -30,7 +30,12 @@ component accessors="true" persistent="true" {
         }
 
         newPortfolio.setName(arguments.portfolio.name);
-        newPortfolio.setDescription(arguments.portfolio.description);
+        if (len(arguments.portfolio.description)) {
+            newPortfolio.setDescription(arguments.portfolio.description);
+        }
+        else {
+            newPortfolio.setDescription(arguments.portfolio.name);
+        }
 
         entitySave(newPortfolio);
     }
