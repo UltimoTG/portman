@@ -1,7 +1,7 @@
 component accessors="true" persistent="true" {
 
     property name="id" column="id" fieldtype="id" ormtype="string" generator="uuid";
-    property name="name" ormtype="string" length="200";
+    property name="name" ormtype="string" required="true" length="200";
     property name="description" ormtype="string" length="500";
     property name="createdOn" ormtype="timestamp" default="#now()#";
     property name="modifiedOn" ormtype="timestamp" default="#now()#";

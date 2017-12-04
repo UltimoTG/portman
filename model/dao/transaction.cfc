@@ -1,15 +1,15 @@
 component accessors="true" persistent="true" {
 
     property name="id" column="id" fieldtype="id" ormtype="string" generator="uuid";
-    property name="transactionDate" ormtype="timestamp";
-    property name="transactionType" ormtype="integer";
-    property name="shares" ormtype="integer";
-    property name="price" ormtype="double";
-    property name="commission" ormtype="double";
+    property name="transactionDate" required="true" ormtype="timestamp";
+    property name="transactionType" required="true" ormtype="integer";
+    property name="shares" required="true" ormtype="integer";
+    property name="price" required="true" ormtype="double";
+    property name="commission" required="true" ormtype="double";
     property name="notes" ormtype="string" length="500";
     property name="createdOn" ormtype="timestamp";
     property name="modifiedOn" ormtype="timestamp";
-    property name="positionID" ormtype="string";
+    property name="positionID" required="true" ormtype="string";
 
 	function list( required string positionID ) {
         var position = entityLoad('position', arguments.positionID, true);
