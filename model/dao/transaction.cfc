@@ -2,10 +2,10 @@ component accessors="true" persistent="true" {
 
     property name="id" column="id" fieldtype="id" ormtype="string" generator="uuid";
     property name="transactionDate" required="true" ormtype="timestamp" notnull="true";
-    property name="transactionType" required="true" ormtype="integer" notnull="true";
+    property name="transactionType" required="true" ormtype="integer" notnull="true" default="1";
     property name="shares" required="true" ormtype="integer" notnull="true";
     property name="price" required="true" ormtype="double" notnull="true";
-    property name="commission" required="true" ormtype="double" notnull="true";
+    property name="commission" required="true" ormtype="double" notnull="true" default="0";
     property name="notes" ormtype="string" length="500";
     property name="createdOn" ormtype="timestamp";
     property name="modifiedOn" ormtype="timestamp";

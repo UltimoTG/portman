@@ -22,6 +22,10 @@ component accessors="true" extends="baseController" {
         variables.fw.redirect( action='transaction.default', queryString="positionID=#rc.transaction.getPositionID()#" );
     }
 
+    function new( struct rc ) {
+        rc.transaction = getTransactionService().new();
+    }
+
     function edit( struct rc ) {
         rc.positionID = getTransactionService().get(rc.transactionID).getPositionID();
     	rc.transaction = getTransactionService().get(rc.transactionID);
