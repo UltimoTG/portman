@@ -15,7 +15,9 @@ services:
         - LUCEE_PASSWORD=myLuceeRootPassword!
         - LUCEE_JAVA_OPTS=-Xms1024m -Xmx1024m
   appdb:
-    image: mysql
+    image: mysql:5.7
     environment:
         MYSQL_ROOT_PASSWORD : mySQLRootPassword!
         MYSQL_DATABASE : PortMan
+    ports:
+      - "3306:3306"
