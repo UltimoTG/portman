@@ -2,7 +2,7 @@ component accessors="true" {
 
     private any function getData( required string stockSymbol, date startDate = "#now()-7#", date endDate = "#now()#" ) {
         var symbol = arguments.stockSymbol;
-        var quandl_API = "https://www.quandl.com/api/v3/datasets/WIKI/";
+        var quandl_API = "https://www.quandl.com/api/v3/datasets/EOD/";
         var startDate = dateformat(arguments.startDate, "yyyy-mm-dd");
         var endDate = dateformat(arguments.endDate, "yyyy-mm-dd");
 
