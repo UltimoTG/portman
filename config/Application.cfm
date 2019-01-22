@@ -1,0 +1,2 @@
+Access restricted!
+<cfabort>
