@@ -5,3 +5,4 @@ Create a file named "quandl.key.cfm" in the /config folder and copy your Quandl 
 
 Install Docker if you don't aleady have it, then 
 - `docker-compose up`
+- Go to http://localhost on your machine
