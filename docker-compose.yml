@@ -12,12 +12,20 @@ services:
     links:
         - appdb
     environment:
-        - LUCEE_PASSWORD=myLuceeRootPassword!
-        - LUCEE_JAVA_OPTS=-Xms1024m -Xmx1024m
+        LUCEE_PASSWORD: myLuceeRootPassword!
+        LUCEE_JAVA_OPTS: -Xms1024m -Xmx1024m
+        PORTMAN_DBHOST: appdb.portman.com
+        PORTMAN_DATABASE: PortMan
+        PORTMAN_DATASOURCE: PortMan
+        PORTMAN_DBUSERNAME: portManUser
+        PORTMAN_DBPASSWORD: portManPassword!
   appdb:
-    image: mysql:5.7
+    image: mysql:8.0.15
+    container_name: appdb.portman.com
     environment:
-        MYSQL_ROOT_PASSWORD : mySQLRootPassword!
-        MYSQL_DATABASE : PortMan
+        MYSQL_ROOT_PASSWORD: mySQLRootPassword!
+        MYSQL_DATABASE: PortMan
+        MYSQL_USER: portManUser
+        MYSQL_PASSWORD: portManPassword!
     ports:
       - "3306:3306"

@@ -13,6 +13,7 @@ component {
     this.ormenabled = true;
     this.datasource = "PortMan";
     this.ormSettings.dbCreate = "update";
+    this.ormSettings.dialect = "MYSQL";
 
     // set up per-application mappings as needed:
     // this.mappings[ '/framework' ] = expandPath( '../path/to/framework' );

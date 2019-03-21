@@ -12,6 +12,9 @@ RUN set -x && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Lucee config
+COPY /docker/lucee/lucee-server.xml /opt/lucee/server/lucee-server/context/lucee-server.xml
+
 # Copy default nginx config files
 COPY /docker/nginx/nginx.conf /etc/nginx/
 COPY /docker/nginx/default.conf /etc/nginx/conf.d/
